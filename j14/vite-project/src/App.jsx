@@ -6,6 +6,8 @@ import Products from "./pages/Products";
 import Page404 from "./pages/Page404";
 import Shoes from "./pages/Shoes";
 import Bags from "./pages/Bags";
+import Showproducts from "./pages/Showproducts";
+import Basket from "./pages/Basket";
 
 function App() {
   return (
@@ -16,7 +18,10 @@ function App() {
         <Route path="Shoes" element={<Shoes />} />
         <Route path="Bags" element={<Bags />} />
       </Route>
+      <Route path="/Products/:productid" element={<Showproducts />} />
+
       <Route path="*" element={<Page404 />} />
+      <Route path="/basket" element={<Basket />} />
     </Routes>
   );
 }
